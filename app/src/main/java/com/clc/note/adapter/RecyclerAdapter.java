@@ -101,6 +101,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter {
                             new RecordDao().deleteById(Integer.parseInt(idItemTV.getText().toString()));
 
                             Intent intent1 = new Intent(mAppContext, MainActivity.class);
+                            intent1.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                             mAppContext.startActivity(intent1);
 
                             mAppContext.typeIdAfterSave = mTypeId;

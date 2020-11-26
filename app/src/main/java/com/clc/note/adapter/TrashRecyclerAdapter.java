@@ -96,7 +96,9 @@ public class TrashRecyclerAdapter extends RecyclerView.Adapter {
                         public void onClick(View view) {
                             new RecordDao().restoreById(Integer.parseInt(idItemTV.getText().toString()));
 
-                            mAppContext.startActivity(new Intent(mAppContext, TrashListActivity.class));
+                            Intent intent = new Intent(mAppContext, TrashListActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mAppContext.startActivity(intent);
 
                             Toast.makeText(mAppContext,R.string.has_restore,Toast.LENGTH_SHORT).show();
                         }
@@ -124,7 +126,9 @@ public class TrashRecyclerAdapter extends RecyclerView.Adapter {
                         public void onClick(DialogInterface dialogInterface, int i) {
                             new RecordDao().deleteOneInTrash(Integer.parseInt(idItemTV.getText().toString()));
 
-                            mAppContext.startActivity(new Intent(mAppContext, TrashListActivity.class));
+                            Intent intent = new Intent(mAppContext, TrashListActivity.class);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                            mAppContext.startActivity(intent);
 
                             Toast.makeText(mAppContext,R.string.delete_forever,Toast.LENGTH_SHORT).show();
                         }
