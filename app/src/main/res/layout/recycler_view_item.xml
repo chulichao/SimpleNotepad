@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/item_view_id"
+        />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_add_bg"
+        android:layout_margin="3dp"
+        android:paddingLeft="15dp"
+        android:paddingVertical="4dp"
+        android:id="@+id/linear_left"
+        >
+        <TextView
+            android:id="@+id/item_view_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:layout_marginVertical="2dp"
+            />
+        <TextView
+            android:id="@+id/item_view_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#77333333"
+            android:layout_marginVertical="2dp"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:id="@+id/item_view_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="2dp"
+                />
+            <TextView
+                android:id="@+id/item_view_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/to_trash"
+                android:textColor="#FF011A"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="10dp"
+                android:paddingHorizontal="3dp"
+                android:gravity="center"
+                android:background="@drawable/btn_delete_bg"
+                android:visibility="invisible"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/btn_add_bg"
+        android:id="@+id/linear_right"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_view_delete"
+            android:text="@string/delete"
+            android:textColor="#F44336"
+            />
+    </LinearLayout>-->
+
+</LinearLayout>

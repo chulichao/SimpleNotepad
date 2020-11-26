@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clc.note">
+
+    <application
+        android:name="com.clc.note.util.AppContext"
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.clc.note.activity.LoginActivity"></activity>
+        <activity
+            android:name="com.clc.note.activity.PwdActivity"
+            android:label="@string/setPwd" />
+        <activity
+            android:name="com.clc.note.activity.TrashListActivity"
+            android:label="@string/trash"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name="com.clc.note.activity.DetailRecordActivity"
+            android:label="@string/detail_of_record" />
+        <activity
+            android:name="com.clc.note.activity.UpdateRecordActivity"
+            android:label="@string/update_record" />
+
+        <activity
+            android:name="com.clc.note.activity.AddRecordActivity"
+            android:label="@string/addRecordActivity_label" />
+
+        <activity
+            android:name="com.clc.note.activity.MainActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
